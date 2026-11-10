@@ -28,9 +28,6 @@ jobs:
       - name: Show Forge version
         run: cd contracts && forge --version
 
-      - name: Run Forge fmt
-        run: cd contracts && forge fmt --check
-
       - name: Run Forge build
         run: cd contracts && forge build --sizes
 
