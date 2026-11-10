@@ -6,7 +6,7 @@ A starter template for building zero-knowledge dApps with Noir circuits, Solidit
 
 - [Bun](https://bun.com)
 - [Foundry](https://book.getfoundry.sh/getting-started/installation)
-- [Nargo](https://noir-lang.org/docs/getting_started/quick_start) (v1.0.0-beta.18)
+- [Nargo](https://noir-lang.org/docs/getting_started/quick_start) (v1.0.0)
 
 ## 1. Build Circuits
 

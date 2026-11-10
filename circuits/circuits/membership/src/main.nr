@@ -1,10 +1,10 @@
 mod merkle;
 
 use merkle::calculate_root;
-use poseidon::poseidon2::Poseidon2::hash;
+use poseidon::poseidon2::Poseidon2;
 
 fn hasher(inputs: [Field; 2]) -> Field {
-    hash(inputs, 2)
+    Poseidon2::hash(inputs, 2)
 }
 
 fn main(

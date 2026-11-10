@@ -4,10 +4,13 @@
   "scripts": {
     "build": "for f in circuits/*; do if [ -d \"$f\" ]; then (cd \"$f\" && nargo compile && nargo build); fi; done",
     "export-app": "mkdir -p ../app/artifacts/circuits && for f in circuits/*; do if [ -d \"$f\" ]; then (cd \"$f\" && cp ./target/$(basename \"$f\").json ../../../app/artifacts/circuits/$(basename \"$f\").json); fi; done",
-    "export-contracts": "mkdir -p ../contracts/src/verifiers && bun run scripts/generate-solidity-verifiers.ts && for f in circuits/*; do if [ -d \"$f\" ]; then (cd \"$f\" && cp ./target/$(basename \"$f\")_verifier.sol ../../../contracts/src/verifiers/$(basename \"$f\")_verifier.sol); fi; done"
+    "export-contracts": "mkdir -p ../contracts/src/verifiers && bun run scripts/generate-solidity-verifiers.ts && for f in circuits/*; do if [ -d \"$f\" ]; then (cd \"$f\" && cp ./target/$(basename \"$f\")_verifier.sol ../../../contracts/src/verifiers/$(basename \"$f\")_verifier.sol); fi; done",
+    "test": "bun test ./test"
   },
   "dependencies": {
-    "@aztec/bb.js": "3.0.0-nightly.20260102",
-    "@noir-lang/noir_js": "1.0.0-beta.18"
+    "@aztec-foundation/bb.js": "6.0.0",
+    "@noir-lang/noir_js": "1.0.0",
+    "@zk-kit/lean-imt": "^2.2.5",
+    "@zkpassport/poseidon2": "^0.6.2"
   }
 }

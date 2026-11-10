@@ -1,5 +1,5 @@
 import { Noir, type InputMap, type CompiledCircuit } from "@noir-lang/noir_js";
-import { Barretenberg, type ProofData, UltraHonkBackend } from "@aztec/bb.js";
+import { Barretenberg, type ProofData, UltraHonkBackend } from "@aztec-foundation/bb.js"
 
 export type CircuitType = "membership";
 
